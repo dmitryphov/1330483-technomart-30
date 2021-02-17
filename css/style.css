@@ -1,0 +1,370 @@
+/* fonts */
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* variables */
+
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #32425C;
+  --basic-dark-gray: #293449;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-white: #fff;
+  --basic-black: #000;
+
+  --special-ylellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --active: #BA2732;
+  --hover: #CA2C37;
+  --active-header-controls: #161D29;
+  --main-nav-active: #1D2739;
+  --price: #A9A9A9;
+}
+
+/* global */
+body {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto
+}
+
+.firm-list,
+.feature-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.heading {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background: var(--basic-red);
+}
+
+.btn:hover {
+  background: var(--hover);
+}
+
+.btn:active {
+  background: var(--active);
+}
+
+/* header-top */
+.page-header {
+  background: var(--basic-background);
+}
+
+.header-top {
+  background: var(--basic-dark-gray);
+  color: var(--basic-white);
+}
+
+.logo {
+  color: var(--basic-white);
+  background: var(--basic-red);
+}
+
+.header-search input {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.header-search input::placeholder,
+.header-controls_link,
+.header-arrange_link {
+  color: inherit;
+}
+
+.header-arrange_link {
+  vertical-align: middle;
+  background: var(--basic-green);
+}
+
+/* header-content */
+.header-info > p {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--basic-red);
+}
+
+.header-contact_phone {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.header-contact_address {
+  font-size: 14px;
+  color: var(--basic-dark-gray);
+}
+
+.user-wrap a {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background: var(--basic-white);
+}
+
+.main-nav {
+  background: var(--basic-grey);
+  color: var(--basic-white);
+}
+
+.main-nav a {
+  color: inherit;
+}
+
+/* products */
+.products {
+  color: var(--basic-white);
+}
+
+.product-item_material {
+  background: var(--special-ylellow);
+}
+
+.product-item_tool {
+  background: var(--special-blue);
+}
+
+.product-item_equipment {
+  background: var(--special-lilac);
+}
+
+.product-item_sale {
+ background: var(--special-greenlight);
+}
+
+.product-item_delivery {
+  background: var(--special-yellowlight);
+}
+
+.product-item h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.product-btn {
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, .5);
+}
+
+/* slider */
+
+.product-slider_perfo {
+  background: #808080 url("../img/slider/slider-bg-one.jpg") no-repeat 0 0;
+}
+
+.product-slider_drill {
+  background: #808080 url("../img/slider/slider-bg-two.jpg") no-repeat 0 0;
+}
+
+/* popular */
+.popular-heading {
+  color: var(--basic-grey);
+}
+
+.popular-product_item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.popular-product_item span {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.popular-product_item .price {
+  color: var(--price);
+  text-decoration: line-through;
+}
+
+.popular-product_item .price-new {
+  color: var(--basic-white);
+  background: var(--basic-red);
+}
+
+/* service */
+.servises {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.service-btn {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  background: transparent;
+  background: var(--basic-grey);
+  color: var(--basic-white);
+  border: none;
+  outline: none;
+}
+
+.service-delivery {
+  background: url("../img/delivery.png") no-repeat;
+}
+
+/* features */
+.features {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.feature-list {
+  font-size: 18px;
+}
+
+/* footer */
+.page-footer {
+  color: var(--basic-white);
+  background: var(--basic-grey);
+}
+
+.footer-top_nav a {
+  color: inherit;
+}
+
+.footer-phone {
+  color: inherit;
+}
+
+.footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-bottom_menu a,
+.footer-feedback a {
+  color: var(--special-yellowlight);
+}
+
+.footer-social_link {
+  color:inherit;
+}
+
+/* эффекты наведения и нажатия */
+
+/* header */
+.logo:active {
+  background: var(--active);
+}
+
+.header-search input:focus {
+  color: var(--basic-black);
+  text-transform: capitalize;
+  outline: none;
+  background: var(--basic-white);
+}
+
+.header-controls_link:active {
+  background: var(--active-header-controls);
+}
+
+.header-arrange_link:hover {
+  background: var(--success);
+}
+
+.header-arrange_link:active,
+.header-controls_link:active {
+  color: rgba(255, 255, 255, .5);
+}
+
+.user-wrap a:hover {
+  color: var(--basic-red);
+}
+
+.main-nav a:hover {
+  background: var(--basic-dark-gray);
+}
+
+.main-nav a:active {
+  background: var(--main-nav-active);
+  opacity: .5;
+}
+
+/* service */
+.service-btn:hover {
+  background: var(--basic-dark-gray);
+}
+
+.service-btn:focus {
+  color: var(--basic-dark-gray);
+  background: var(--basic-white);
+}
+
+/* footer */
+.footer-top_nav:hover,
+.footer-bottom_menu:hover,
+.footer-feedback a:hover {
+  text-decoration: underline;
+}
+
+.footer-top_nav:active,
+.footer-bottom_menu:active {
+  opacity: .5;
+}
+
+.footer-social_link:hover {
+  background: var(--basic-red);
+}
+
+.footer-feedback a:active {
+  color: var(--basic-red);
+}
