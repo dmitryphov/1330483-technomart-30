@@ -40,6 +40,7 @@
   --special-lilac: #DC91D8;
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
+  --special-greylight: #F7F3EC;
 
   --success: #5FBB2D;
   --warning: #FFBF47;
@@ -48,6 +49,7 @@
   --active-header-controls: #161D29;
   --main-nav-active: #1D2739;
   --price: #A9A9A9;
+  --input-hover: #B5B5B5;
 }
 
 /* global */
@@ -78,6 +80,10 @@ img {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.heading-other {
+    color: var(--basic-grey);
 }
 
 .btn {
@@ -124,6 +130,10 @@ img {
   color: inherit;
 }
 
+.header-controls_active {
+  background: var(--basic-red);
+}
+
 .header-arrange_link {
   vertical-align: middle;
   background: var(--basic-green);
@@ -137,7 +147,7 @@ img {
 }
 
 .header-contact_phone {
-  font-size: 30px;
+  font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
 }
@@ -147,7 +157,7 @@ img {
   color: var(--basic-dark-gray);
 }
 
-.user-wrap a {
+.user-menu a {
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -213,29 +223,27 @@ img {
 }
 
 /* popular */
-.popular-heading {
-  color: var(--basic-grey);
-}
 
-.popular-product_item h3 {
+
+.catalog-item h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
 }
 
-.popular-product_item span {
+.catalog-item span {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
 }
 
-.popular-product_item .price {
+.catalog-price {
   color: var(--price);
   text-decoration: line-through;
 }
 
-.popular-product_item .price-new {
+.catalog-price_new {
   color: var(--basic-white);
   background: var(--basic-red);
 }
@@ -326,8 +334,12 @@ img {
   color: rgba(255, 255, 255, .5);
 }
 
-.user-wrap a:hover {
+.user-menu a:hover {
   color: var(--basic-red);
+}
+
+.user-menu a:active {
+  color: var(--basic-greylight);
 }
 
 .main-nav a:hover {
@@ -368,3 +380,122 @@ img {
 .footer-feedback a:active {
   color: var(--basic-red);
 }
+
+/* CATALOG */
+
+.user-link {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.user-menu_link a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-grey);
+}
+
+.breadcrumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.filters h2 {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background: var(--special-greylight);
+}
+
+.filters ul {
+  list-style: none;
+}
+
+.filters legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filters label {
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.filter-btn {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sorting {
+  background: var(--special-greylight);
+}
+
+.sorting h2 {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting-list a {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: underline dashed var(--basic-red);
+  color:rgba(0, 0, 0, .3);
+}
+
+.catalog-pagination-item {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.catalog-pagination-active {
+  color: var(--basic-white);
+  background: var(--basic-red);
+}
+
+.about {
+  font-size: 13px;
+  line-height: 24px;
+  background: var(--basic-background);
+}
+
+/* попап */
+.modal-btn-wrap {
+  background: var(--basic-background);
+}
+
+.modal-btn-proceed {
+  color: var(--basic-black);
+  background: var(--basic-white);
+  border: none;
+}
+
+/* эффекты наведения и нажатия */
+
+.user-link:active {
+  color: var(--basic-greylight);
+}
+
+.sorting-list a:hover {
+  color: var(--basic-black);
+}
+
+.sorting-list a:focus {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+
+
+
