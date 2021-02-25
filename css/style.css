@@ -71,7 +71,6 @@ a {
 
 img {
   max-width: 100%;
-  height: auto
 }
 
 html {
@@ -90,14 +89,14 @@ html {
   list-style: none;
 }
 
-.heading {
+.modal-header {
   margin: 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.heading-other {
+.heading_other {
     color: var(--basic-grey);
 }
 
@@ -127,7 +126,7 @@ html {
   background: var(--basic-dark-gray);
 }
 
-.header-top {
+.header_top {
   display: grid;
   grid-template-columns: 240px 2fr repeat(3, auto);
   color: var(--basic-white);
@@ -168,7 +167,7 @@ html {
   column-gap: 20px;
 }
 
-.header-info > p {
+.header-info-title {
   margin: 0;
   font-size: 16px;
   font-style: italic;
@@ -314,11 +313,11 @@ html {
   line-height: 24px;
 }
 
-.services .heading {
+.services .modal-header {
   grid-column: 1 / -1;
 }
 
-.services p {
+.service-desc {
   grid-column: 1 / -1;
   margin: 0 0 67px;
 }
@@ -358,7 +357,7 @@ html {
   background: var(--basic-grey);
 }
 
-.footer-main-wrapper {
+.footer-mainWrapper {
   display: grid;
   grid-template-columns: 230px 1fr;
 }
@@ -371,12 +370,12 @@ html {
   color: inherit;
 }
 
-.footer-contact-wrapper {
+.footer-contactWrapper {
   display: grid;
   grid-template-columns: 1fr min-content;
 }
 
-.footer-contact-phone {
+.footer-phone {
   color: inherit;
 }
 
@@ -392,12 +391,12 @@ html {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.footer-bottom_menu a,
+.footer-bottomMenu a,
 .footer-feedback a {
   color: var(--special-yellowlight);
 }
 
-.footer-social_link {
+.footer-socialLink {
   color:inherit;
 }
 
@@ -428,11 +427,11 @@ html {
   color: rgba(255, 255, 255, .5);
 }
 
-.user-menu a:hover {
+.user-navigation:hover {
   color: var(--basic-red);
 }
 
-.user-menu a:active {
+.user-navigation:active {
   color: var(--basic-greylight);
 }
 
@@ -483,19 +482,57 @@ html {
   color: var(--basic-black);
 }
 
-.user-menu_link a {
+.user-navigation {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-grey);
 }
 
-.breadcrumbs a {
+.page-catalog {
+  display: grid;
+  grid-template-areas:
+    "bread bread"
+    "title title"
+    "filters sorting"
+    "filters catalog"
+    "about about";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 59px 89px 38px 1fr min-content;
+}
+
+.inner-catalog_title {
+  grid-area: title;
+  margin-bottom: 20px;
+  background: var(--basic-background);
+}
+
+.inner-catalog {
+  grid-area: catalog;
+  margin-left: 21px;
+  margin-bottom: 59px;
+}
+
+.breadcrumbs {
+  grid-area: bread;
+}
+
+.breadcrumbs-link {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
 }
 
-.filters h2 {
+.filters {
+  grid-area: filters;
+}
+
+.filter-title,
+.sorting-title {
+  margin: 0;
+}
+
+.filter-title {
+  margin-bottom: 14px;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -530,16 +567,18 @@ html {
 }
 
 .sorting {
+  grid-area: sorting;
+  margin-left: 21px;
   background: var(--special-greylight);
 }
 
-.sorting h2 {
+.sorting-title{
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.sorting-list a {
+.sorting-link {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -559,9 +598,15 @@ html {
 }
 
 .about {
+  padding: 64px 0 67px;
+  grid-area: about;
   font-size: 13px;
   line-height: 24px;
   background: var(--basic-background);
+}
+
+.about .modal-header {
+  margin-bottom: 25px;
 }
 
 /* попап */
@@ -581,11 +626,11 @@ html {
   color: var(--basic-greylight);
 }
 
-.sorting-list a:hover {
+.sorting-link:hover {
   color: var(--basic-black);
 }
 
-.sorting-list a:focus {
+.sorting-link:focus {
   color: var(--basic-red);
   text-decoration: none;
 }
