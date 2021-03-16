@@ -595,21 +595,20 @@ html {
 
 .catalog-price_new {
   position: relative;
-  margin-top: 13px;
+  margin: 13px 0 21px;
   padding: 10px 32px;
   color: var(--basic-white);
   background: var(--basic-red);
 }
 
-.catalog-price::after {
+.catalog-price_new::after {
   content: "";
   position: absolute;
-  border: none;
-  border-top: 20px solid transparent;
+  border: 18px solid transparent;
   border-left: 20px solid var(--basic-red);
   border-bottom: 20px solid transparent;
-  left: 78%;
-  top: 87%;
+  left: 100%;
+  top: 0%;
 }
 
 .catalog-hover {
@@ -1237,6 +1236,10 @@ html {
   text-transform: uppercase;
   text-decoration: underline dashed var(--basic-red);
   color:rgba(0, 0, 0, .3);
+}
+
+.catalog {
+  text-align: center;
 }
 
 .catalog-list {
