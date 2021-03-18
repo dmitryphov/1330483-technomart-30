@@ -9,7 +9,7 @@
     <link rel="icon" href="img/icon/icon.svg" type="image/svg+xml">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header header-catalog">
       <div class="header-top-wrapper">
         <div class="header_top container">
           <a href="index.html" class="logo">
@@ -41,10 +41,8 @@
           </div>
           <div class="user-wrap">
             <a class="user-link" href="#">Равшан Джамшутович</a>
-            <div class="user-menu user-menu_link">
-              <a class="user-navigation" href="#">Мои заказы</a>
-              <a class="user-navigation" href="#">Личный кабинет</a>
-            </div>
+            <a class="user-navigation" href="#">Мои заказы</a>
+            <a class="user-navigation" href="#">Личный кабинет</a>
           </div>
         </div>
         <nav class="main-nav">
@@ -61,7 +59,12 @@
     <main class="page-catalog">
       <div class="container">
         <div class="breadcrumbs">
-          <a class="breadcrumbs-link" href="#">HOME</a>
+          <a class="breadcrumbs-link breadcrumbs-link_home" href="index.html">
+            <svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/>
+              <path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/>
+            </svg>
+          </a>
           <a class="breadcrumbs-link" href="catalog.html">КАТАЛОГ</a>
           <a class="breadcrumbs-link" href="#">ИНСТРУМЕНТ</a>
           <a class="breadcrumbs-link breadcrumbs-active">ПЕРФАРАТОРЫ</a>
@@ -90,29 +93,24 @@
               <legend>ПРОИЗВОДИТЕЛИ:</legend>
               <ul class="filter-checkbox-list">
                 <li class="filter-checkbox-item">
-                  <label>
-                    <input  class="filter-input-checkbox" type="checkbox" name="bosch" checked>BOSCH
-                  </label>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox" id="filter-bosch" name="bosch" checked>
+                  <label for="filter-bosch">BOSCH</label>
                 </li>
                 <li class="filter-checkbox-item">
-                  <label>
-                    <input  class="filter-input-checkbox" type="checkbox" name="interskol">ИНТЕРСКОЛ
-                  </label>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox" id="filter-interskol" name="interskol">
+                  <label for="filter-interskol">ИНТЕРСКОЛ</label>
                 </li>
                 <li class="filter-checkbox-item">
-                  <label>
-                    <input  class="filter-input-checkbox" type="checkbox" name="makita" checked>MAKITA
-                  </label>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox" id="filter-makita" name="makita" checked>
+                  <label for="filter-makita">MAKITA</label>
                 </li>
                 <li class="filter-checkbox-item">
-                  <label>
-                    <input  class="filter-input-checkbox" type="checkbox" name="dewalt">DEWALT
-                  </label>
+                  <input  class="filter-input-checkbox visually-hidden" type="checkbox" id="filter-dewalt" name="dewalt">
+                  <label for="filter-dewalt">DEWALT</label>
                 </li>
                 <li class="filter-checkbox-item">
-                  <label>
-                    <input  class="filter-input-checkbox" type="checkbox" name="hitachi">HITACHI
-                  </label>
+                  <input class="filter-input-checkbox visually-hidden" type="checkbox" id="filter-hitachi" name="hitachi">
+                  <label for="filter-hitachi">HITACHI</label>
                 </li>
               </ul>
             </fieldset>
@@ -120,11 +118,11 @@
               <legend>ПИТАНИЕ:</legend>
               <ul class="filter-radio-list">
                 <li class="filter-radio-item">
-                  <input class="filter-input-radio" type="radio" name="food" id="filter-rechargeable" value="rechargeable" checked>
+                  <input class="filter-input-radio visually-hidden" type="radio" name="food" id="filter-rechargeable" value="rechargeable" checked>
                   <label for="filter-rechargeable">Аккумуляторные</label>
                 </li>
                 <li class="filter-radio-item">
-                  <input class="filter-input-radio" type="radio" name="food" id="filter-lan" value="lan">
+                  <input class="filter-input-radio visually-hidden" type="radio" name="food" id="filter-lan" value="lan">
                   <label for="filter-lan">Сетевые</label>
                 </li>
               </ul>
@@ -135,13 +133,21 @@
         <section class="sorting">
           <h2 class="sorting-title">Сортировка:</h2>
           <div class="sorting-list">
-            <a class="sorting-link sorting-link_active" href="#">ПО ЦЕНЕ</a>
-            <a class="sorting-link" href="#">ПО ТИПУ</a>
-            <a class="sorting-link" href="#">ПО ФУНКЦИОНАЛУ</a>
+            <button class="sorting-link sorting-link_active" href="#">ПО ЦЕНЕ</button>
+            <button class="sorting-link" href="#">ПО ТИПУ</button>
+            <button class="sorting-link" href="#">ПО ФУНКЦИОНАЛУ</button>
           </div>
-          <div>
-            <a href="#"></a>
-            <a href="#"></a>
+          <div class="sorting-arrow">
+            <button class="sorting-arrow-link sorting-arrow_active" href="#">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
+              </svg>
+            </button>
+            <button class="sorting-arrow-link" href="#">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
+              </svg>
+            </button>
           </div>
         </section>
         <section class="catalog inner-catalog">
@@ -259,7 +265,7 @@
             <a class="catalog-pagination-item catalog-pagination-active">1</a>
             <a class="catalog-pagination-item" href="#">2</a>
             <a class="catalog-pagination-item" href="#">3</a>
-            <a class="catalog-pagination-item" href="#">СЛЕДУЮЩАЯ</a>
+            <a class="catalog-pagination-item pagination-item_next" href="#">СЛЕДУЮЩАЯ</a>
           </div>
         </section>
       </div>
