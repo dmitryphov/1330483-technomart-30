@@ -119,6 +119,10 @@ body {
       align-content: start;
 }
 
+* {
+  font-family: "Cuprum", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -331,7 +335,6 @@ img {
 .basket-link-full {
   width: 138px;
   background-color: var(--basic-red);
-}
 
 .user-menu {
   width: 300px;
@@ -987,6 +990,12 @@ img {
   opacity: 1;
 }
 
+.catalog-item h3 {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
 .catalog-item:hover .catalog-img {
   opacity: 0;
 }
@@ -1190,7 +1199,7 @@ img {
 
 .service-text {
   margin: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 
 }
@@ -2173,7 +2182,8 @@ img {
 }
 
 .feedback-form input {
-  width: 212px;
+  padding: 0 10px;
+  width: 192px;
   height: 32px;
   border: 2px solid var(--special-click-gray);
   border-radius: 2px;
@@ -2198,9 +2208,14 @@ img {
 }
 
 .feedback-item textarea {
-  width: 452px;
+  padding: 10px;
+  width: 432px;
   border: 2px solid var(--special-click-gray);
-  height: 105px;
+  height: 85px;
+}
+
+.feedback-item textarea::placeholder {
+  font-family: "PT Sans", sans-serif;
 }
 
 .feedback-form {
@@ -2241,6 +2256,7 @@ img {
 }
 
 .modal-feedback-button {
+  padding: 0;
   position: absolute;
   width: 460px;
   height: 38px;
