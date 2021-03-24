@@ -2314,6 +2314,7 @@ input[type=number] {
 
 }
 
+
 .feedback-form input::-webkit-input-placeholder,
 .feedback-form textarea::-webkit-input-placeholder {
   color: var(--special-catalog-price-gray);
