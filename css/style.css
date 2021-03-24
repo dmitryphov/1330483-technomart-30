@@ -119,10 +119,6 @@ body {
       align-content: start;
 }
 
-* {
-  font-family: "Cuprum", sans-serif;
-}
-
 a {
   text-decoration: none;
 }
@@ -156,7 +152,8 @@ img {
   margin-top: 12px;
 }
 
-.logo:active {
+.logo:active,
+.footer-logo:active {
   background-color: var(--special-click-red);
 }
 
@@ -221,7 +218,8 @@ img {
   opacity: 0.3;
 }
 
-.header-search:hover::before, .header-search:focus::before {
+.header-search:hover::before,
+.header-search:focus::before {
   opacity: 1;
 }
 
@@ -285,7 +283,8 @@ img {
 
 .bookmark-link {
   position: relative;
-  width: 168px;
+  width: 165px;
+  padding-left: 3px;
 }
 
 .bookmark-link::before {
@@ -317,13 +316,14 @@ img {
 .basket-link {
   position: relative;
   width: 136px;
+  padding-left: 10px;
 }
 
 .basket-link::before {
   content: "";
   position: absolute;
   top: 13px;
-  left: 8px;
+  left: 11px;
   width: 15px;
   height: 15px;
   background-image: url("../img/icon-cart.svg");
@@ -333,8 +333,9 @@ img {
 }
 
 .basket-link-full {
-  width: 138px;
+  width: 127px;
   background-color: var(--basic-red);
+}
 
 .user-menu {
   width: 300px;
@@ -991,6 +992,8 @@ img {
 }
 
 .catalog-item h3 {
+  margin: 0;
+  width: 185px;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
@@ -1020,8 +1023,8 @@ img {
 }
 .price-button {
   position: absolute;
-  bottom: 3px;
-  left: 45px;
+  bottom: 5px;
+  left: 44px;
   width: 141px;
   height: 38px;
   color: var(--basic-white);
@@ -1108,7 +1111,8 @@ img {
   background-position: 0 0;
 }
 
-.catalog-btn_buy:hover, .catalog-btn_buy:focus {
+.catalog-btn_buy:hover,
+.catalog-btn_buy:focus {
   background-color: var(--special-focus-green);
 }
 
@@ -1477,7 +1481,8 @@ img {
   text-decoration: underline;
 }
 
-.footer-main a:active {
+.footer-main a:active,
+.footer-main-bottom a:active {
   opacity: 0.5;
   text-decoration: none;
 }
@@ -1528,8 +1533,8 @@ img {
 }
 
 .footer-main-bottom-row p {
-  margin: 0;
-  padding-left: 2px;
+  margin: -5px;
+  padding-left: 8px;
 }
 
 .footer-social-wrapper {
@@ -1552,7 +1557,7 @@ img {
 }
 
 .footer-copyright p {
-  margin-top: 34px;
+  margin-top: 29px;
   margin-bottom: 0;
   font-size: 16px;
   line-height: 18px;
@@ -1657,6 +1662,12 @@ img {
   height: 60px;
 }
 
+.breadcrumbs-home {
+  width: 14px;
+  background: url(../img/icon-home.svg) no-repeat 0 3px;
+  font-size: 0;
+}
+
 .breadcrumbs a {
   text-decoration: none;
   color: var(--basic-black);
@@ -1748,15 +1759,21 @@ img {
   position: absolute;
   top: 28px;
   left: 0;
-  width: 4px;
-  height: 4px;
   padding: 0;
-  border: 8px solid var(--basic-white);
+  border: 10px solid var(--basic-white);
   background-color: var(--special-range-background);
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 var(--special-range-shadow);
           box-shadow: 0 2px 1px 0 var(--special-range-shadow);
   cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: var(--special-range-background);
+  border-radius: 50%;
 }
 
 .range-controls .toggle-min {
@@ -1777,12 +1794,25 @@ img {
 }
 
 .price-controls input {
+  margin: 0;
   width: 95px;
   height: 38px;
   text-align: center;
   background-color: var(--special-filter-gray);
   border: none;
-  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 }
 .form-chekbox-filter {
   display: -webkit-box;
@@ -1856,6 +1886,10 @@ img {
 
 .filter-input-checkbox:disabled + label {
   opacity: .4;
+}
+
+.input-filter-checkbox:hover + label {
+  opacity: 1;
 }
 
 .form-radio-filter {
@@ -2036,7 +2070,7 @@ img {
 
 .about {
   background-color: var(--basic-gray);
-  height: 261px;
+  padding-bottom: 70px;
 }
 
 .about h2 {
@@ -2172,6 +2206,10 @@ img {
           animation: shake 0.6s;
 }
 
+.feedback-form {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
 .feedback-form label {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
@@ -2187,7 +2225,14 @@ img {
   height: 32px;
   border: 2px solid var(--special-click-gray);
   border-radius: 2px;
+  font-size: 13px;
+  line-height: 24px;
+}
 
+.feedback-name-input:focus,
+.feedback-email-input:focus,
+.feedback-item textarea:focus {
+  outline: 1px solid var(--special-click-gray);
 }
 
 .feedback-item {
@@ -2212,6 +2257,8 @@ img {
   width: 432px;
   border: 2px solid var(--special-click-gray);
   height: 85px;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .feedback-item textarea::placeholder {
@@ -2266,28 +2313,32 @@ img {
 
 }
 
-.feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
+.feedback-form input::-webkit-input-placeholder,
+.feedback-form textarea::-webkit-input-placeholder {
   color: var(--special-catalog-price-gray);
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   padding-left: 12px;
 }
 
-.feedback-form input::-moz-placeholder, .feedback-form textarea::-moz-placeholder {
+.feedback-form input::-moz-placeholder,
+.feedback-form textarea::-moz-placeholder {
   color: var(--special-catalog-price-gray);
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   padding-left: 12px;
 }
 
-.feedback-form input:-ms-input-placeholder, .feedback-form textarea:-ms-input-placeholder {
+.feedback-form input:-ms-input-placeholder,
+.feedback-form textarea:-ms-input-placeholder {
   color: var(--special-catalog-price-gray);
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   padding-left: 12px;
 }
 
-.feedback-form input::-ms-input-placeholder, .feedback-form textarea::-ms-input-placeholder {
+.feedback-form input::-ms-input-placeholder,
+.feedback-form textarea::-ms-input-placeholder {
   color: var(--special-catalog-price-gray);
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
